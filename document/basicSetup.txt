@@ -1,0 +1,26 @@
+1)NAVIGATION SETUP
+
+Starting with installation for https://reactnavigation.org/docs/getting-started
+using this we setup
+yarn add @react-navigation/native
+yarn add react-native-screens react-native-safe-area-context
+
+
+When doing pod install first time it fails and shows
+zsh: command not found: pod
+
+to fix it we run 
+brew install cocoapods
+
+we need to install babel-plugin-module-resolver
+so that we can use or simplfy our imports ../../../Login to @src/Login like this (example)
+
+we have modifed two files for this tsconfig.json & babel.config.tsconfig
+
+
+After this is done we have created a screen folder where we keep auth & app in different folders
+
+to use screen in android
+Configuring react-native-screens on Android
+
+
