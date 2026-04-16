@@ -14,6 +14,7 @@ import {
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
+  console.log("git intial")
 
   return (
     <SafeAreaProvider>
