@@ -6,4 +6,5 @@ export const storage = createMMKV({
 
 export const StorageKeys = {
   TOKEN: 'token',
+  THEME: "theme",
 };

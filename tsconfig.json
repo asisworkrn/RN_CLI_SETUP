@@ -12,6 +12,9 @@
     },
     "ignoreDeprecations": "6.0"
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["src",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts"],
   "exclude": ["**/node_modules", "**/Pods"]
 }
