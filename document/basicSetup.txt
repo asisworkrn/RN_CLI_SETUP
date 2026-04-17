@@ -20,7 +20,18 @@ we have modifed two files for this tsconfig.json & babel.config.tsconfig
 
 After this is done we have created a screen folder where we keep auth & app in different folders
 
-to use screen in android
-Configuring react-native-screens on Android
 
+2) Zustand Redux API setup
+
+install axios zustand @tanstack/react-query mmkv with nitro modules
+
+After adding the required libraries we have started build structure
+first we have created state folder for
+separating application state logic from everything else.
+
+We created the state folder with storage.ts and useAuthStore.ts so that all app state logic is kept in one clean and organized place instead of being scattered across screens,
+because storage.ts handles permanent device storage using MMKV (so data like the token stays even after app restart),
+while useAuthStore.ts handles live app state using Zustand (so UI and navigation instantly react when login/logout happens); this separation makes the app easy to scale in the future
+because when your app grows you can simply add new stores like useCartStore, useSettingsStore, or useThemeStore without touching existing logic, and since storage is centralized with keys and a single MMKV instance,
+you can safely manage more persistent data without duplication or bugs, which keeps the architecture clean, predictable, and ready for large production apps.
 

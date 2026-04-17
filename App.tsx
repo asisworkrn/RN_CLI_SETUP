@@ -5,19 +5,23 @@
  * @format
  */
 
+import { queryClient } from '@src/app/queryClient';
 import RootNavigator from '@src/navigation/root/RootNavigator';
+import { QueryClientProvider } from '@tanstack/react-query';
 import { StatusBar, StyleSheet, useColorScheme } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
-  console.log('git intial');
+
 
   return (
+    <QueryClientProvider client={queryClient}>
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <RootNavigator></RootNavigator>
     </SafeAreaProvider>
+    </QueryClientProvider>
   );
 }
 
