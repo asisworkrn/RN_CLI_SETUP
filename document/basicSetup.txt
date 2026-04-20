@@ -65,4 +65,19 @@ yarn react-native-bootsplash generate assets/branding/splash.png \
   Now after images are generated you need to add bootsplash lines of code in both ios folder & android folder in main files of that which you will get in latest
   documenatation of the bootsplash library
 
-  
+  For fonts
+
+  download fonts in you app keep it in assets/fonts
+   create a react-native.config.js file
+
+
+   module.exports = {
+  project: {
+    ios: {},
+    android: {},
+  },
+  assets: ['./assets/fonts'],
+};
+
+keep this code and run npx react-native-asset
+command it will create the fonts in ios & android folder now just setup your text file use it in your app

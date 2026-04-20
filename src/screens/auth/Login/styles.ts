@@ -11,6 +11,6 @@ export const styles = StyleSheet.create((theme) => ({
   title: {
     fontSize: 18,
     color: theme.colors.text,
-    fontWeight: "600",
+    // fontWeight: "600",
   },
 }));
