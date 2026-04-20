@@ -45,3 +45,24 @@ acc to size and run and build your project
 For ANDROID
 Open android studio go to res folder and click on new them imageSet and select your hd icon there thennext and confirm 
 and re run your project the app icon will be setup
+
+
+For SPLASH
+ded5f7
+
+
+yarn react-native-bootsplash generate assets/branding/splash.png \
+  --platforms=android,ios,web \
+  --background=DED5F7 \
+  --logo-width=100 \
+  --assets-output=assets/bootsplash \
+  --flavor=main \
+  --html=public/index.html
+
+  create assets folder make two folder inside that now run and update you image and background from the above command
+  
+
+  Now after images are generated you need to add bootsplash lines of code in both ios folder & android folder in main files of that which you will get in latest
+  documenatation of the bootsplash library
+
+  
