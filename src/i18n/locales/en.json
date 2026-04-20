@@ -1,0 +1,10 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "home": {
+    "title": "Home Screen"
+  }
+}

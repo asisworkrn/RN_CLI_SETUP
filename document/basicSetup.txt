@@ -1,0 +1,83 @@
+1)NAVIGATION SETUP
+
+Starting with installation for https://reactnavigation.org/docs/getting-started
+using this we setup
+yarn add @react-navigation/native
+yarn add react-native-screens react-native-safe-area-context
+
+
+When doing pod install first time it fails and shows
+zsh: command not found: pod
+
+to fix it we run 
+brew install cocoapods
+
+we need to install babel-plugin-module-resolver
+so that we can use or simplfy our imports ../../../Login to @src/Login like this (example)
+
+we have modifed two files for this tsconfig.json & babel.config.tsconfig
+
+
+After this is done we have created a screen folder where we keep auth & app in different folders
+
+
+2) Zustand Redux API setup
+
+install axios zustand @tanstack/react-query mmkv with nitro modules
+
+After adding the required libraries we have started build structure
+first we have created state folder for
+separating application state logic from everything else.
+
+We created the state folder with storage.ts and useAuthStore.ts so that all app state logic is kept in one clean and organized place instead of being scattered across screens,
+because storage.ts handles permanent device storage using MMKV (so data like the token stays even after app restart),
+while useAuthStore.ts handles live app state using Zustand (so UI and navigation instantly react when login/logout happens); this separation makes the app easy to scale in the future
+because when your app grows you can simply add new stores like useCartStore, useSettingsStore, or useThemeStore without touching existing logic, and since storage is centralized with keys and a single MMKV instance,
+you can safely manage more persistent data without duplication or bugs, which keeps the architecture clean, predictable, and ready for large production apps.
+
+3) Setup for splash/ app icon / fonts / localization
+
+First doing setup for app icon changes
+For IOS 
+open xcode goes to your app name inside that again app name folder then images and select appIcon there paste your icon images
+acc to size and run and build your project
+
+For ANDROID
+Open android studio go to res folder and click on new them imageSet and select your hd icon there thennext and confirm 
+and re run your project the app icon will be setup
+
+
+For SPLASH
+ded5f7
+
+
+yarn react-native-bootsplash generate assets/branding/splash.png \
+  --platforms=android,ios,web \
+  --background=DED5F7 \
+  --logo-width=100 \
+  --assets-output=assets/bootsplash \
+  --flavor=main \
+  --html=public/index.html
+
+  create assets folder make two folder inside that now run and update you image and background from the above command
+  
+
+  Now after images are generated you need to add bootsplash lines of code in both ios folder & android folder in main files of that which you will get in latest
+  documenatation of the bootsplash library
+
+  For fonts
+
+  download fonts in you app keep it in assets/fonts
+   create a react-native.config.js file
+
+
+   module.exports = {
+  project: {
+    ios: {},
+    android: {},
+  },
+  assets: ['./assets/fonts'],
+};
+
+keep this code and run npx react-native-asset
+command it will create the fonts in ios & android folder now just setup your text file use it in your app
