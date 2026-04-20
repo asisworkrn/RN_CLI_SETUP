@@ -35,3 +35,13 @@ while useAuthStore.ts handles live app state using Zustand (so UI and navigation
 because when your app grows you can simply add new stores like useCartStore, useSettingsStore, or useThemeStore without touching existing logic, and since storage is centralized with keys and a single MMKV instance,
 you can safely manage more persistent data without duplication or bugs, which keeps the architecture clean, predictable, and ready for large production apps.
 
+3) Setup for splash/ app icon / fonts / localization
+
+First doing setup for app icon changes
+For IOS 
+open xcode goes to your app name inside that again app name folder then images and select appIcon there paste your icon images
+acc to size and run and build your project
+
+For ANDROID
+Open android studio go to res folder and click on new them imageSet and select your hd icon there thennext and confirm 
+and re run your project the app icon will be setup
