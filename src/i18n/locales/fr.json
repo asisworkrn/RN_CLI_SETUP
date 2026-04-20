@@ -1,0 +1,10 @@
+{
+  "common": {
+    "welcome": "Bienvenue",
+    "login": "Connexion",
+    "logout": "Déconnexion"
+  },
+  "home": {
+    "title": "Écran d'accueil"
+  }
+}
